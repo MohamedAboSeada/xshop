@@ -1,5 +1,5 @@
 # 🛍️ XShop
-![XShop Banner](assets/brand/banner.png)
+![XShop Banner](assets/images/brand/banner.png)
 
 ## 🚀 Tech Stack
 

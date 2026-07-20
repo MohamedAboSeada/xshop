@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mix/mix.dart';
-import 'package:xshop/core/theme/design_tokens.dart';
+import 'design_tokens.dart';
 
 /// general border
 final $mutedBorder = BorderSideToken('input_b_muted');

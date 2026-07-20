@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mix/mix.dart';
 
 import 'app.dart';
-import 'core/theme/design_tokens.dart';
+import 'core/theme/tokens/design_tokens.dart';
 
 void main() {
   runApp(

@@ -1,0 +1,21 @@
+name: xshop
+description: "XShop is a modern cross-platform fashion e-commerce application built with Flutter for Android, iOS, and Web, powered by Medusa.js as a headless commerce backend."
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand/

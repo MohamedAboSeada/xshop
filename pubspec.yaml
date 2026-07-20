@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   lucide_icons_flutter: ^3.1.15
+  mix: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -19,4 +20,14 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/brand/
+    - assets/images/brand/
+    - assets/images/icons/
+    - assets/images/onboarding/
+  fonts:
+    - family: GeneralSans
+      fonts:
+        - asset: assets/fonts/general_sans/Fonts/TTF/GeneralSans-Variable.ttf
+        - asset: assets/fonts/general_sans/Fonts/TTF/GeneralSans-VariableItalic.ttf
+          style: italic
+    - assets/icons/
+    - assets/onboarding/

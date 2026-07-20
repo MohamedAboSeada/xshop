@@ -29,5 +29,3 @@ flutter:
         - asset: assets/fonts/general_sans/Fonts/TTF/GeneralSans-Variable.ttf
         - asset: assets/fonts/general_sans/Fonts/TTF/GeneralSans-VariableItalic.ttf
           style: italic
-    - assets/icons/
-    - assets/onboarding/

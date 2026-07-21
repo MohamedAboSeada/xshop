@@ -1,12 +1,13 @@
 import 'package:mix/mix.dart';
+
 import '../tokens/design_tokens.dart';
 
 /// Variants
-final muted = NamedVariant('muted');
-final moreMuted = NamedVariant('more_muted');
+const muted = NamedVariant('muted');
+const moreMuted = NamedVariant('more_muted');
 
-final medium = NamedVariant('medium');
-final semibold = NamedVariant('semibold');
+const medium = NamedVariant('medium');
+const semibold = NamedVariant('semibold');
 
 /// Heading styles
 final largeHeading = TextStyler().style($h1.mix()).color($primary900());

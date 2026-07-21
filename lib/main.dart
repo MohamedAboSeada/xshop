@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mix/mix.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/core/utils/image_cache.dart';
+import 'core/constant/app_assets.dart';
+import 'core/utils/image_cache.dart';
 
 import 'app.dart';
 import 'core/theme/tokens/design_tokens.dart';

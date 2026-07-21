@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:xshop/features/onboarding/presentation/view/screens/splash_screen.dart';
+
+import 'features/onboarding/presentation/view/screens/splash_screen.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

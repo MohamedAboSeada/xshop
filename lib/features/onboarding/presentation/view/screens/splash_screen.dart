@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mix/mix.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/core/utils/image_cache.dart';
-import 'package:xshop/features/onboarding/presentation/view/screens/onboarding_screen.dart';
+import '../../../../../core/constant/app_assets.dart';
+import '../../../../../core/utils/image_cache.dart';
+import 'onboarding_screen.dart';
 
 import '../../../../../core/theme/tokens/design_tokens.dart';
 

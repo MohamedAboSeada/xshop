@@ -20,7 +20,7 @@ The application UI is based on the following Figma design:
 
 ## 📋 Roadmap
 
-- [ ] **Onboarding**
+- [x] **Onboarding**
 
 - [ ] **Authentication**
   - [ ] Login

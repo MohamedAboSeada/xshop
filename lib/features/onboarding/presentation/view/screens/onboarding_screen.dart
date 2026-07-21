@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/features/onboarding/presentation/view/widgets/action_button_app_bar.dart';
+import '../../../../../core/constant/app_assets.dart';
+import '../widgets/action_button_app_bar.dart';
 import '../../../../../core/theme/tokens/design_tokens.dart';
 
 class OnboardingScreen extends StatelessWidget {

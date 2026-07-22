@@ -25,6 +25,7 @@ flutter:
     - assets/images/brand/
     - assets/images/icons/
     - assets/images/onboarding/
+    - assets/licenses/
   fonts:
     - family: GeneralSans
       fonts:

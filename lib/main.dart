@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mix/mix.dart';
-import 'core/constant/app_assets.dart';
-import 'core/utils/image_cache.dart';
 
 import 'app.dart';
-import 'core/theme/tokens/design_tokens.dart';
+import 'core/constant/app_assets.dart';
+import 'core/utils/image_cache.dart';
 
 /// precache splash screen images to avoid images flickering
 /// TODO will be transfered later
@@ -48,15 +46,6 @@ Future<void> main() async {
   await _precacheSplashImages();
 
   runApp(
-    MixScope(
-      colors: colorTokens,
-      spaces: spaceTokens,
-      radii: radiusTokens,
-      borders: borderTokens,
-      textStyles: textStyleTokens,
-      fontWeights: fontWeightTokens,
-      doubles: doubleTokens,
-      child: const MainApp(),
-    ),
+    const MainApp(),
   );
 }

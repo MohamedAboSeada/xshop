@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mix/mix.dart';
+import 'package:xshop/core/constant/app_durations.dart';
+import '../../../../../core/theme/tokens/theme_extensions.dart';
 import '../../../../../core/constant/app_assets.dart';
 import '../../../../../core/utils/image_cache.dart';
 import 'onboarding_screen.dart';
-
-import '../../../../../core/theme/tokens/design_tokens.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,6 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
     final images = [
       ImageConfig(type: .svg, assetPath: AppAssets.onboardingPatternLight),
       ImageConfig(type: .svg, assetPath: AppAssets.onboardingText),
+      ImageConfig(type: .svg, assetPath: AppAssets.facebookIcon),
+      ImageConfig(type: .svg, assetPath: AppAssets.googleIcon),
       ImageConfig(type: .normal, assetPath: AppAssets.figure),
     ];
 
@@ -41,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
           );
         }
       }),
-      Future.delayed(const Duration(seconds: 5)),
+      Future.delayed(AppDurations.longDelay),
     ]);
   }
 
@@ -68,9 +69,9 @@ class _SplashScreenState extends State<SplashScreen> {
         statusBarBrightness: Brightness.dark,
       ),
       child: Scaffold(
-        backgroundColor: $primary900.resolve(context),
-        body: StackBox(
-          style: StackBoxStyler(fit: .expand),
+        backgroundColor: context.colors.primary900,
+        body: Stack(
+          fit: .expand,
           children: [
             /// pattern
             SvgPicture.asset(
@@ -79,33 +80,30 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
 
             /// app logo
-            Box(
-              style: BoxStyler().alignment(.center),
+            Center(
               child: SvgPicture.asset(
                 AppAssets.logo,
-                width: $logoWidth.resolve(context).w,
-                height: $logoHeight.resolve(context).h,
+                width: context.dimensions.logoWidth.w,
+                height: context.dimensions.logoHeight.h,
               ),
             ),
 
             /// center the loading indicator
             Positioned(
-              left: $space0.resolve(context),
-              right: $space0.resolve(context),
+              left: context.spaces.s0,
+              right: context.spaces.s0,
               bottom:
-                  MediaQuery.paddingOf(context).bottom +
-                  $space64.resolve(context).h,
-              child: Box(
-                style: BoxStyler().alignment(.center),
+                  MediaQuery.paddingOf(context).bottom + context.spaces.s64.h,
+              child: Center(
                 child: CircularProgressIndicator(
-                  color: $primary0.resolve(context),
+                  color: context.colors.primary0,
                   strokeCap: .round,
                   constraints: BoxConstraints.tightFor(
-                    width: $space56.resolve(context),
-                    height: $space56.resolve(context),
+                    width: context.spaces.s56,
+                    height: context.spaces.s56,
                   ),
-                  backgroundColor: $primary800.resolve(context),
-                  strokeWidth: $space8.resolve(context),
+                  backgroundColor: context.colors.primary800,
+                  strokeWidth: context.spaces.s8,
                 ),
               ),
             ),

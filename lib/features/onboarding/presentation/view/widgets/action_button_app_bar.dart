@@ -1,34 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import 'package:mix/mix.dart';
+import '../../../../auth/presentation/view/screens/sign_up_screen.dart';
+import '../../../../../core/theme/tokens/theme_extensions.dart';
 import '../../../../../core/constant/app_strings.dart';
-import '../../../../../core/theme/styles/action_button.dart';
-import '../../../../../core/theme/tokens/design_tokens.dart';
+import '../../../../../core/widgets/action_button.dart';
 
 class ActionButtonAppBar extends StatelessWidget {
   const ActionButtonAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Box(
-      style: BoxStyler().borderTop(
-        color: $primary100(),
-        style: .solid,
-        width: 1,
+    return Container(
+      decoration: BoxDecoration(
+        border: BoxBorder.all(color: context.colors.primary100),
       ),
       child: BottomAppBar(
         padding: .only(
-          bottom: $space8.resolve(context),
-          left: $space24.resolve(context),
-          right: $space24.resolve(context),
-          top: $space16.resolve(context),
+          bottom: context.spaces.s8,
+          left: context.spaces.s24,
+          right: context.spaces.s24,
+          top: context.spaces.s16,
         ),
-        color: $primary0.resolve(context),
+        color: context.colors.primary0,
         child: ActionButton(
           label: AppStrings.getStarted,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const SignUpScreen()),
+            );
+          },
           icon: LucideIcons.arrowRight,
-          type: .filled,
         ),
       ),
     );

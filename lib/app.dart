@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'features/onboarding/presentation/view/screens/splash_screen.dart';
+import 'core/routing/app_router.dart';
 import 'core/theme/app_theme.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
   static const _designSize = Size(390.0, 844.0);
-  
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: _designSize,
-      child: MaterialApp(
+      child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
-        home: const SplashScreen(),
+        routerConfig: AppRouter.routerConfig,
 
         themeMode: .light,
         theme: AppTheme.appTheme,

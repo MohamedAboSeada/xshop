@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import '../../../../auth/presentation/view/screens/sign_up_screen.dart';
+import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/widgets/action_button.dart';
@@ -25,10 +26,7 @@ class ActionButtonAppBar extends StatelessWidget {
         child: ActionButton(
           label: AppStrings.getStarted,
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const SignUpScreen()),
-            );
+            context.goNamed(AppRoutes.signUp.name);
           },
           icon: LucideIcons.arrowRight,
         ),

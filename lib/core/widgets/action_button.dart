@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xshop/core/constant/app_durations.dart';
+import '../constant/app_durations.dart';
 import '../theme/tokens/theme_extensions.dart';
 
 enum ButtonType { filled, danger, outlined, ghost }

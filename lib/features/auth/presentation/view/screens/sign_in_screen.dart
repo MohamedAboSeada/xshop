@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/constant/app_strings.dart';
 import '../widgets/s_s_o_buttons.dart';
 import '../layouts/auth_layout.dart';
-import 'sign_up_screen.dart';
 import '../widgets/auth_switcher.dart';
 import '../widgets/sign_in_form.dart';
 
@@ -20,10 +21,7 @@ class SignInScreen extends StatelessWidget {
         label: AppStrings.signInSwitcherLabel,
         btnLabel: AppStrings.signInSwitcherBtnLabel,
         onSwitch: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const SignUpScreen()),
-          );
+          context.goNamed(AppRoutes.signUp.name);
         },
       ),
     );

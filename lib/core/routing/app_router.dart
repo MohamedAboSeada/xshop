@@ -1,4 +1,8 @@
 import 'package:go_router/go_router.dart';
+import '../workspace/workspace.dart';
+import '../../features/auth/presentation/view/screens/forget_password_screen.dart';
+import '../../features/auth/presentation/view/screens/reset_password_screen.dart';
+import '../../features/auth/presentation/view/screens/verification_code_screen.dart';
 import '../../features/license/presentation/view/screens/cookie_use_screen.dart';
 import '../../features/license/presentation/view/screens/policy_screen.dart';
 import '../../features/license/presentation/view/screens/terms_screen.dart';
@@ -31,6 +35,27 @@ class AppRouter {
         name: AppRoutes.signIn.name,
         builder: (context, state) => const SignInScreen(),
       ),
+
+      GoRoute(
+        path: AppRoutes.forgetPassword.path,
+        name: AppRoutes.forgetPassword.name,
+        builder: (context, state) => const ForgetPasswordScreen(),
+        routes: [
+          GoRoute(
+            path: AppRoutes.verifyEmail.path,
+            name: AppRoutes.verifyEmail.name,
+            builder: (context, state) => VerificationCodeScreen(
+              email: state.uri.queryParameters["email"] as String,
+            ),
+          ),
+          GoRoute(
+            path: AppRoutes.resetPassword.path,
+            name: AppRoutes.resetPassword.name,
+            builder: (context, state) => const ResetPasswordScreen(),
+          ),
+        ],
+      ),
+
       GoRoute(
         path: AppRoutes.signUp.path,
         name: AppRoutes.signUp.name,
@@ -52,6 +77,13 @@ class AppRouter {
             builder: (context, state) => const CookieUseScreen(),
           ),
         ],
+      ),
+
+      // test route
+      GoRoute(
+        path: AppRoutes.workspace.path,
+        name: AppRoutes.workspace.name,
+        builder: (context, state) => const Workspace(),
       ),
     ],
   );

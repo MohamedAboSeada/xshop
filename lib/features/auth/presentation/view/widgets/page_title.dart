@@ -10,20 +10,18 @@ class PageTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Column(
-        spacing: context.spaces.s8.h,
-        crossAxisAlignment: .start,
-        children: [
-          Text(title, style: context.typography.h2),
-          Text(
-            subtitle,
-            style: context.typography.b1Regular.copyWith(
-              color: context.colors.primary500,
-            ),
+    return Column(
+      spacing: context.spaces.s8.h,
+      crossAxisAlignment: .start,
+      children: [
+        Text(title, style: context.typography.h2),
+        Text(
+          subtitle,
+          style: context.typography.b1Regular.copyWith(
+            color: context.colors.primary500,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

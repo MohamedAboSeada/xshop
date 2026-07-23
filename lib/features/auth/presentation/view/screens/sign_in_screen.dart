@@ -4,7 +4,7 @@ import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/constant/app_strings.dart';
 import '../widgets/s_s_o_buttons.dart';
 import '../layouts/auth_layout.dart';
-import '../widgets/auth_switcher.dart';
+import '../widgets/action_prompt.dart';
 import '../widgets/sign_in_form.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -17,10 +17,10 @@ class SignInScreen extends StatelessWidget {
       subtitle: AppStrings.signInSubtitle,
       form: const SignInForm(),
       extra: const SSOButtons(),
-      switcher: AuthSwitcher(
+      switcher: ActionPrompt(
         label: AppStrings.signInSwitcherLabel,
         btnLabel: AppStrings.signInSwitcherBtnLabel,
-        onSwitch: () {
+        onAction: () {
           context.goNamed(AppRoutes.signUp.name);
         },
       ),

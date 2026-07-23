@@ -53,8 +53,8 @@ class SignUpForm extends StatelessWidget {
           label: AppStrings.createPasswordLabel,
           type: .signUp,
         ),
-        _buildTermsAndConditions(context),
       ],
+      formFooter: _buildTermsAndConditions(context),
     );
   }
 

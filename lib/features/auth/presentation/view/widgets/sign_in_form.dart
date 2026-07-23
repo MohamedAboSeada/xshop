@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
-import 'package:styled_text/tags/styled_text_tag_action.dart';
-import 'package:styled_text/widgets/styled_text.dart';
+import 'package:go_router/go_router.dart';
+import 'package:xshop/core/constant/app_routes.dart';
+import 'package:xshop/features/auth/presentation/view/widgets/action_prompt.dart';
 import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/widgets/forms/app_form.dart';
 import '../../../../../core/widgets/forms/form_text_field.dart';
 import '../../../../../core/widgets/forms/password_field.dart';
-import '../../../../../core/theme/tokens/theme_extensions.dart';
 
 class SignInForm extends StatelessWidget {
   const SignInForm({super.key});
@@ -35,29 +35,15 @@ class SignInForm extends StatelessWidget {
           hint: AppStrings.loginPasswordHint,
           label: AppStrings.loginPasswordLabel,
         ),
-        _buildForgetPassword(context),
       ],
-    );
-  }
-
-  StyledText _buildForgetPassword(BuildContext context) {
-    return StyledText(
-      text: AppStrings.forgetPasswordText,
-      style: context.typography.b2Medium.copyWith(
-        color: context.colors.primary500,
+      formFooter: ActionPrompt(
+        label: "Forget your password?",
+        btnLabel: "Reset",
+        onAction: () {
+          context.pushNamed(AppRoutes.forgetPassword.name);
+        },
+        alignment: .centerLeft,
       ),
-      tags: {
-        AppStrings.tagLink: StyledTextActionTag(
-          (String? text, Map<String?, String?> attrs) {
-            final String tag = attrs['tag']!;
-            debugPrint(tag);
-          },
-          style: context.typography.b2Semibold.copyWith(
-            decoration: TextDecoration.underline,
-            color: context.colors.primary900,
-          ),
-        ),
-      },
     );
   }
 }

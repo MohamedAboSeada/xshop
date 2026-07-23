@@ -8,12 +8,18 @@ class AppForm extends StatefulWidget {
   final List<Widget> fields;
   final String submitLabel;
   final ValueChanged<Map<String, dynamic>> onSubmit;
+  final bool isActionSeparated;
+  final Widget? formFooter;
+  final GlobalKey<FormBuilderState>? formKey;
 
   const AppForm({
     super.key,
     required this.fields,
     required this.submitLabel,
     required this.onSubmit,
+    this.isActionSeparated = false,
+    this.formFooter,
+    this.formKey,
   });
 
   @override
@@ -21,8 +27,14 @@ class AppForm extends StatefulWidget {
 }
 
 class _AppFormState extends State<AppForm> {
-  final _formKey = GlobalKey<FormBuilderState>();
+  late final GlobalKey<FormBuilderState> _formKey;
   bool _isFormValid = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _formKey = widget.formKey ?? GlobalKey<FormBuilderState>();
+  }
 
   void _onFormChanges() {
     final isValid = _formKey.currentState?.isValid ?? false;
@@ -47,10 +59,14 @@ class _AppFormState extends State<AppForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
-        spacing: context.spaces.s16.h,
         children: [
-          ...widget.fields,
-
+          Column(spacing: context.spaces.s16.h, children: [...widget.fields]),
+          if (widget.formFooter != null) ...[
+            context.spaces.s16.verticalSpace,
+            widget.formFooter!,
+            context.spaces.s16.verticalSpace,
+          ],
+          if (widget.isActionSeparated) const Spacer(),
           ActionButton(
             label: widget.submitLabel,
             onPressed: _isFormValid ? _submit : null,

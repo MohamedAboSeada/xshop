@@ -44,7 +44,6 @@ class _AppFormState extends State<AppForm> {
     return FormBuilder(
       key: _formKey,
       onChanged: _onFormChanges,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,

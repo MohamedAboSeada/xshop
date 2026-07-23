@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:xshop/core/constant/app_durations.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/constant/app_durations.dart';
+import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 import '../../../../../core/constant/app_assets.dart';
 import '../../../../../core/utils/image_cache.dart';
-import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -50,10 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await _precacheAppImages();
       if (mounted) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const OnboardingScreen()),
-        );
+        context.goNamed(AppRoutes.onboarding.name);
       }
     });
   }

@@ -3,8 +3,8 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:string_validator/string_validator.dart';
-import 'package:xshop/core/constant/app_durations.dart';
-import 'package:xshop/core/theme/tokens/app_borders.dart';
+import '../../constant/app_durations.dart';
+import '../../theme/tokens/app_borders.dart';
 
 import '../../theme/tokens/theme_extensions.dart';
 
@@ -58,6 +58,7 @@ class _FormTextFieldState extends State<FormTextField> {
         Text(widget.label, style: context.typography.b1Medium),
         FormBuilderTextField(
           key: _fieldState,
+          autovalidateMode: .onUserInteraction,
           name: widget.name,
           valueTransformer: (value) {
             if (value == null) return null;

@@ -25,7 +25,7 @@ The application UI is based on the following Figma design:
 - [ ] **Authentication**
   - [X] Login
   - [X] Register
-  - [ ] Reset Password
+  - [X] Reset Password
   - [ ] Logout
 
 - [ ] **Product Discovery**

@@ -48,6 +48,10 @@ class AppAssets {
     assetName: "logos_facebook.svg",
     location: .icons,
   );
+  static final checkDuotone = _getAsset(
+    assetName: "Check-duotone.svg",
+    location: .icons,
+  );
 
   /// License files
   static final terms = _getAsset(assetName: "terms.md", location: .license);

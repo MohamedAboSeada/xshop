@@ -2,9 +2,10 @@ class AppStrings {
   AppStrings._();
 
   // ==========================================
-  // 1. GENERAL / ONBOARDING
+  // 1. GENERAL / ONBOARDING / COMMON
   // ==========================================
   static const getStarted = "Get Started";
+  static const continueBtn = "Continue";
 
   // ==========================================
   // 2. AUTHENTICATION (TITLES & SSO)
@@ -24,6 +25,29 @@ class AppStrings {
   static const signUpSwitcherBtnLabel = "Login";
   static const signUpSubmitBtn = "Create Account";
 
+  /// Forget Password
+  static const forgotPasswordTitle = "Forgot password";
+  static const forgotPasswordSubtitle =
+      "Enter your email for the verification process. We will send 4 digits code to your email.";
+  static const sendCodeBtn = "Send Code";
+
+  /// Verification Code
+  static const verificationCodeTitle = "Enter 4 Digit Code";
+  static String verificationCodeSubtitle(String email) =>
+      "Enter 4 digit code that your receive on your email ($email).";
+  static const emailNotReceivedPrompt = "Code not received?";
+  static const resendCodeBtn = "Resend code";
+
+  /// Reset Password
+  static const resetPasswordTitle = "Reset Password";
+  static const resetPasswordSubtitle =
+      "Set the new password for your account so you can login and access all the features.";
+
+  /// Reset Success Dialog
+  static const passwordChangedTitle = "Password Changed!";
+  static const passwordChangedSubtitle =
+      "Your can now use your new password to login to your account.";
+
   /// SSO Buttons
   static const continueWithGoogle = "Continue with Google";
   static const continueWithFacebook = "Continue with Facebook";
@@ -34,6 +58,8 @@ class AppStrings {
   static const fieldEmail = "email";
   static const fieldPassword = "password";
   static const fieldFullName = "fullname";
+  static const fieldConfirmPassword = "confirm";
+  static const fieldOtp = "otp";
 
   // ==========================================
   // 4. FORM FIELDS & LABELS
@@ -47,11 +73,13 @@ class AppStrings {
   static const loginPasswordLabel = "Password";
   static const loginPasswordHint = "Enter your password";
 
-  /// Sign Up Specific
+  /// Sign Up & Reset Password Specific
   static const fullNameLabel = "Full Name";
   static const fullNameHint = "eg. John Doe";
   static const createPasswordLabel = "Create Password";
   static const createPasswordHint = "Create strong password";
+  static const confirmPasswordLabel = "Confirm Password";
+  static const confirmPasswordHint = "Type password again";
 
   // ==========================================
   // 5. VALIDATION MESSAGES

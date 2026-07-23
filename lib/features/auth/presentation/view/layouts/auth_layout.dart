@@ -32,7 +32,9 @@ class AuthLayout extends StatelessWidget {
               ),
               sliver: SliverMainAxisGroup(
                 slivers: [
-                  PageTitle(title: title, subtitle: subtitle),
+                  SliverToBoxAdapter(
+                    child: PageTitle(title: title, subtitle: subtitle),
+                  ),
                   _buildVSpace(context),
                   SliverToBoxAdapter(child: form),
                   _buildVSpace(context),

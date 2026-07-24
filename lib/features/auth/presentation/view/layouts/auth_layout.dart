@@ -35,12 +35,13 @@ class AuthLayout extends StatelessWidget {
                   SliverToBoxAdapter(
                     child: PageTitle(title: title, subtitle: subtitle),
                   ),
-                  _buildVSpace(context),
+                  _buildVSpace(context, context.spaces.s24.h),
                   SliverToBoxAdapter(child: form),
-                  _buildVSpace(context),
+                  _buildVSpace(context, context.spaces.s24.h),
                   if (extra != null) _buildOrDivider(context),
-                  _buildVSpace(context),
+                  _buildVSpace(context, context.spaces.s24.h),
                   if (extra != null) SliverToBoxAdapter(child: extra),
+                  _buildVSpace(context, context.spaces.s16.h),
                   SliverFillRemaining(
                     hasScrollBody: false,
                     child: Align(alignment: .bottomCenter, child: switcher),
@@ -71,6 +72,6 @@ class AuthLayout extends StatelessWidget {
     );
   }
 
-  SliverToBoxAdapter _buildVSpace(BuildContext context) =>
-      SliverToBoxAdapter(child: context.spaces.s24.verticalSpace);
+  SliverToBoxAdapter _buildVSpace(BuildContext context, double space) =>
+      SliverToBoxAdapter(child: space.verticalSpace);
 }

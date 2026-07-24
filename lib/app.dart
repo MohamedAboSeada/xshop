@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'core/routing/app_router.dart';
@@ -9,6 +10,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint(MediaQuery.sizeOf(context).toString());
     return ScreenUtilInit(
       designSize: _designSize,
       child: MaterialApp.router(
@@ -29,7 +31,7 @@ class MainApp extends StatelessWidget {
             data: mediaQuery.copyWith(
               textScaler: TextScaler.linear(clampedScale),
             ),
-            child: child!,
+            child: DevicePreview.appBuilder(context, child),
           );
         },
       ),

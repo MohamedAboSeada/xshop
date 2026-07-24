@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+import 'package:xshop/core/widgets/custom_app_bar.dart';
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 import '../widgets/page_title.dart';
 
@@ -19,24 +19,10 @@ class PasswordResetLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        titleSpacing: context.spaces.s12,
-        title: context.canPop()
-            ? IconButton(
-                onPressed: () => context.pop(),
-                icon: const Icon(Icons.arrow_back),
-              )
-            : null,
-      ),
+      appBar: const CustomAppBar(),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
-            left: context.spaces.s24.w,
-            right: context.spaces.s24.w,
-            bottom: context.spaces.s24.w,
-            top: context.spaces.s12.w,
-          ),
+          padding: EdgeInsets.all(context.spaces.s24.r),
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(

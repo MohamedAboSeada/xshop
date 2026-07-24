@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:xshop/core/widgets/custom_app_bar.dart';
 
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 
@@ -18,10 +19,7 @@ class LicenseLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.colors.primary0,
-      appBar: AppBar(
-        title: Text(title, style: context.typography.b1Semibold),
-        titleSpacing: 0,
-      ),
+      appBar: CustomAppBar(title: title),
       body: FutureBuilder(
         future: rootBundle.loadString(markdownPath),
         builder: (context, asyncSnapshot) {

@@ -18,7 +18,7 @@ class AccountTile extends StatelessWidget {
       leading: Icon(config.leadingIcon, color: config.foregroundColor),
       title: Text(
         config.title,
-        style: context.typography.b1Regular.copyWith(
+        style: context.typography.b1Medium.copyWith(
           color: config.foregroundColor,
         ),
       ),

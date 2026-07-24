@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:xshop/features/app/account/features/help_center/presentation/screen/help_center_screen.dart';
 import '../../features/app/account/presentation/view/screen/account_screen.dart';
 import '../widgets/layouts/app_shell.dart';
 import '../../features/app/cart/presentation/screen/cart_screen.dart';
@@ -130,6 +131,13 @@ class AppRouter {
                 path: AppRoutes.account.path,
                 name: AppRoutes.account.name,
                 builder: (context, state) => const AccountScreen(),
+                routes: [
+                  GoRoute(
+                    path: AppRoutes.helpCenter.path,
+                    name: AppRoutes.helpCenter.name,
+                    builder: (context, state) => const HelpCenterScreen(),
+                  ),
+                ],
               ),
             ],
           ),

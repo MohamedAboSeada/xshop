@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:xshop/core/constant/app_routes.dart';
 import 'package:xshop/core/constant/app_strings.dart';
+import 'package:xshop/core/widgets/custom_app_bar.dart';
 
-import '../../../../../../core/theme/tokens/app_borders.dart';
-import '../../../../../../core/theme/tokens/theme_extensions.dart';
 import '../data/models/account_tile_config.dart';
 import '../widgets/account_section.dart';
 import '../widgets/logout_dialog.dart';
@@ -15,54 +15,75 @@ class AccountScreen extends StatelessWidget {
   static const _accountSections = [
     [
       AccountTileConfig(
+        id: .myOrders,
         title: AppStrings.myOrders,
-        leadingIcon: LucideIcons.package,
+        leadingIcon: LucideIcons.package500,
       ),
     ],
     [
       AccountTileConfig(
+        id: .myDetails,
         title: AppStrings.myDetails,
-        leadingIcon: LucideIcons.badgeInfo,
+        leadingIcon: LucideIcons.badgeInfo500,
       ),
       AccountTileConfig(
+        id: .addressBook,
         title: AppStrings.addressBook,
-        leadingIcon: LucideIcons.house,
+        leadingIcon: LucideIcons.mapPin500,
       ),
       AccountTileConfig(
+        id: .paymentMethods,
         title: AppStrings.paymentMethods,
-        leadingIcon: LucideIcons.creditCard,
+        leadingIcon: LucideIcons.creditCard500,
       ),
       AccountTileConfig(
+        id: .notifications,
         title: AppStrings.notifications,
-        leadingIcon: LucideIcons.bell,
+        leadingIcon: LucideIcons.bell500,
       ),
       AccountTileConfig(
+        id: .languages,
         title: AppStrings.languages,
-        leadingIcon: LucideIcons.globe,
+        leadingIcon: LucideIcons.globe500,
       ),
     ],
     [
       AccountTileConfig(
+        id: .faqs,
         title: AppStrings.faqs,
-        leadingIcon: LucideIcons.circleHelp,
+        leadingIcon: LucideIcons.circleHelp500,
       ),
       AccountTileConfig(
+        id: .helpCenter,
         title: AppStrings.helpCenter,
-        leadingIcon: LucideIcons.headset,
+        leadingIcon: LucideIcons.headset500,
       ),
     ],
     [
       AccountTileConfig(
+        id: .logout,
         title: AppStrings.logout,
-        leadingIcon: LucideIcons.logOut,
+        leadingIcon: LucideIcons.logOut500,
         foregroundColor: Colors.red,
       ),
     ],
   ];
 
   void _onTilePressed(BuildContext context, AccountTileConfig config) {
-    switch (config.title) {
-      case AppStrings.logout:
+    switch (config.id) {
+      case AccountTileId.myOrders:
+      case AccountTileId.myDetails:
+      case AccountTileId.addressBook:
+      case AccountTileId.paymentMethods:
+      case AccountTileId.notifications:
+      case AccountTileId.languages:
+      case AccountTileId.faqs:
+        debugPrint(config.title);
+        break;
+      case AccountTileId.helpCenter:
+        context.goNamed(AppRoutes.helpCenter.name);
+        break;
+      case AccountTileId.logout:
         _showLogoutDialog(context);
         break;
     }
@@ -79,11 +100,7 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(AppStrings.account, style: context.typography.h4),
-        titleSpacing: context.spaces.s24.w,
-        shape: Border(bottom: context.borders.moreMutedBorder.toBorderSide()),
-      ),
+      appBar: const CustomAppBar(title: AppStrings.account),
       body: CustomScrollView(
         slivers: [
           for (var i = 0; i < _accountSections.length; i++)

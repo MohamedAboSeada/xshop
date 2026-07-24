@@ -1,4 +1,10 @@
 import 'package:go_router/go_router.dart';
+import 'package:xshop/features/app/account/presentation/view/screen/account_screen.dart';
+import '../widgets/layouts/app_shell.dart';
+import '../../features/app/cart/presentation/screen/cart_screen.dart';
+import '../../features/app/home/presentation/screen/home_screen.dart';
+import '../../features/app/saved/presentation/screen/saved_screen.dart';
+import '../../features/app/search/presentation/screen/search_screen.dart';
 import '../workspace/workspace.dart';
 import '../../features/auth/presentation/view/screens/forget_password_screen.dart';
 import '../../features/auth/presentation/view/screens/reset_password_screen.dart';
@@ -77,6 +83,59 @@ class AppRouter {
             builder: (context, state) => const CookieUseScreen(),
           ),
         ],
+      ),
+
+      // app routes
+      StatefulShellRoute.indexedStack(
+        branches: [
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.home.path,
+                name: AppRoutes.home.name,
+                builder: (context, state) => const HomeScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.search.path,
+                name: AppRoutes.search.name,
+                builder: (context, state) => const SearchScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.saved.path,
+                name: AppRoutes.saved.name,
+                builder: (context, state) => const SavedScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.cart.path,
+                name: AppRoutes.cart.name,
+                builder: (context, state) => const CartScreen(),
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            routes: [
+              GoRoute(
+                path: AppRoutes.account.path,
+                name: AppRoutes.account.name,
+                builder: (context, state) => const AccountScreen(),
+              ),
+            ],
+          ),
+        ],
+        builder: (context, state, navigationShell) =>
+            AppShell(navigationShell: navigationShell),
       ),
 
       // test route

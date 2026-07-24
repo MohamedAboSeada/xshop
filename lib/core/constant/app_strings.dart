@@ -12,7 +12,7 @@ class AppStrings {
   // ==========================================
 
   /// Sign In
-  static const signInTitle = "Login to your account";
+  static const signInTitle = "Welcome back";
   static const signInSubtitle = "It’s great to see you again.";
   static const signInSwitcherLabel = "Don't have an account?";
   static const signInSwitcherBtnLabel = "Join Us";

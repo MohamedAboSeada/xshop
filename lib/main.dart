@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -46,6 +47,11 @@ Future<void> main() async {
   await _precacheSplashImages();
 
   runApp(
-    const MainApp(),
+    DevicePreview(
+      enabled: false,
+      builder: (BuildContext context) {
+        return const MainApp();
+      },
+    ),
   );
 }

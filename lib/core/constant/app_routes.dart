@@ -18,14 +18,18 @@ class AppRoutes {
     name: 'forgotPassword',
   );
   static const verifyEmail = Route(path: 'verify', name: 'verifyEmail');
-  static const resetPassword = Route(
-    path: 'reset',
-    name: 'resetPassword',
-  );
+  static const resetPassword = Route(path: 'reset', name: 'resetPassword');
 
   static const terms = Route(path: 'terms', name: 'terms');
   static const policy = Route(path: 'privacy-policy', name: 'privacyPolicy');
   static const cookies = Route(path: 'cookies-policy', name: 'cookiesPolicy');
+
+  /// app routes
+  static const home = Route(path: '/home', name: 'home');
+  static const search = Route(path: '/search', name: 'search');
+  static const saved = Route(path: '/saved', name: 'saved');
+  static const cart = Route(path: '/cart', name: 'cart');
+  static const account = Route(path: '/account', name: 'account');
 
   // test route
   static const workspace = Route(path: '/workspace', name: 'workspace');

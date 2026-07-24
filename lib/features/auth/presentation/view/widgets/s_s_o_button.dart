@@ -43,7 +43,11 @@ class SSOButton extends StatelessWidget {
             spacing: context.spaces.s12.w,
             mainAxisAlignment: .center,
             children: [
-              SvgPicture.asset(icon, width: 24.0, height: 24.0),
+              SvgPicture.asset(
+                icon,
+                width: context.spaces.s24.w,
+                height: context.spaces.s24.h,
+              ),
               Text(
                 label,
                 style: context.typography.b1Medium.copyWith(

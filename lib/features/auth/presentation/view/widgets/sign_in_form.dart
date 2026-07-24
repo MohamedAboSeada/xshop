@@ -17,6 +17,7 @@ class SignInForm extends StatelessWidget {
       submitLabel: AppStrings.signInSubmitBtn,
       onSubmit: (formData) {
         debugPrint('Login Data: $formData');
+        context.goNamed(AppRoutes.home.name);
       },
       fields: [
         FormTextField(

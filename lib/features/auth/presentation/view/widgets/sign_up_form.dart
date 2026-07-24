@@ -20,6 +20,7 @@ class SignUpForm extends StatelessWidget {
       submitLabel: AppStrings.signUpSubmitBtn,
       onSubmit: (formData) {
         debugPrint('Sign Up Data: $formData');
+        context.goNamed(AppRoutes.home.name);
       },
       fields: [
         FormTextField(

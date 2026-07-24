@@ -9,17 +9,20 @@ class AppBorders extends ThemeExtension<AppBorders> {
   final BoxBorder focusedBorder;
   final BoxBorder errorBorder;
   final BoxBorder successBorder;
+  final BoxBorder moreMutedBorder;
 
   const AppBorders({
     required this.mutedBorder,
     required this.focusedBorder,
     required this.errorBorder,
     required this.successBorder,
+    required this.moreMutedBorder,
   });
 
   factory AppBorders.fromColors(AppColors colors) => AppBorders(
     mutedBorder: Border.all(color: colors.primary400),
     focusedBorder: Border.all(color: colors.primary900),
+    moreMutedBorder: Border.all(color: colors.primary100),
     errorBorder: Border.all(color: colors.danger),
     successBorder: Border.all(color: colors.success),
   );
@@ -30,12 +33,14 @@ class AppBorders extends ThemeExtension<AppBorders> {
     BoxBorder? focusedBorder,
     BoxBorder? errorBorder,
     BoxBorder? successBorder,
+    BoxBorder? moreMutedBorder,
   }) {
     return AppBorders(
       mutedBorder: mutedBorder ?? this.mutedBorder,
       focusedBorder: focusedBorder ?? this.focusedBorder,
       errorBorder: errorBorder ?? this.errorBorder,
       successBorder: successBorder ?? this.successBorder,
+      moreMutedBorder: moreMutedBorder ?? this.moreMutedBorder,
     );
   }
 
@@ -47,6 +52,11 @@ class AppBorders extends ThemeExtension<AppBorders> {
       focusedBorder: BoxBorder.lerp(focusedBorder, other.focusedBorder, t)!,
       errorBorder: BoxBorder.lerp(errorBorder, other.errorBorder, t)!,
       successBorder: BoxBorder.lerp(successBorder, other.successBorder, t)!,
+      moreMutedBorder: BoxBorder.lerp(
+        moreMutedBorder,
+        other.moreMutedBorder,
+        t,
+      )!,
     );
   }
 }

@@ -39,6 +39,28 @@ class AppTheme {
         selectionHandleColor: _colors.primary900,
       ),
 
+      navigationBarTheme: NavigationBarThemeData(
+        backgroundColor: Colors.white,
+        indicatorColor: Colors.transparent,
+        surfaceTintColor: Colors.transparent,
+
+        iconTheme: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
+            return const IconThemeData(color: Colors.black, size: 26);
+          }
+
+          return const IconThemeData(color: Colors.grey, size: 24);
+        }),
+
+        labelTextStyle: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) {
+            return _typography.b3Medium.copyWith(color: _colors.primary900);
+          }
+
+          return _typography.b3Medium.copyWith(color: _colors.primary400);
+        }),
+      ),
+
       inputDecorationTheme: InputDecorationThemeData(
         border: OutlineInputBorder(borderRadius: .all(_radius.r10)),
         enabledBorder: _borders.mutedBorder.toOutlineInputBorder(

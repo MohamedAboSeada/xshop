@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:xshop/core/constant/app_strings.dart';
+import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/constant/app_assets.dart';
 import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/theme/tokens/theme_extensions.dart';

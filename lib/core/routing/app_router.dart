@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:xshop/features/app/account/presentation/view/screen/account_screen.dart';
+import '../../features/app/account/presentation/view/screen/account_screen.dart';
 import '../widgets/layouts/app_shell.dart';
 import '../../features/app/cart/presentation/screen/cart_screen.dart';
 import '../../features/app/home/presentation/screen/home_screen.dart';
@@ -21,7 +21,7 @@ import '../../features/onboarding/presentation/view/screens/splash_screen.dart';
 class AppRouter {
   AppRouter._();
 
-  static final _initialLocation = AppRoutes.splash.path;
+  static final _initialLocation = AppRoutes.account.path;
 
   static final routerConfig = GoRouter(
     initialLocation: _initialLocation,

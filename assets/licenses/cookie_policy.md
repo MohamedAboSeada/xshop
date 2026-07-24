@@ -1,18 +1,38 @@
-# 🍪 The Cookie Jar
-**Serving you better recommendations, not just calories.**
+# Cookie Policy
 
-> **What’s a cookie?** Not the chocolate chip kind. In the digital world, cookies are tiny files saved on your device that help our app remember you, so you don't have to log in every single time.
+_Last updated: July 24, 2026_
 
-### How We Use Them to Upgrade Your Shopping:
+## What Are Cookies?
 
-#### 🟢 The Essentials (Must-Haves)
-These are the VIP bouncers of our app. They keep you logged in securely, remember what’s in your shopping cart if you accidentally close the app, and ensure the checkout process doesn't crash. 
-ww
-#### 🟡 The Tailors (Personalization)
-Ever wonder how we know exactly which jacket matches your sneakers? These cookies remember your size choices, preferred colors, and favorite brands so we can curate a feed that’s 100% you.
+Cookies are small data files stored on your device that help improve your experience while using XShop.
 
-#### 🔵 The Scouts (Analytics)
-We use these to see what’s trending. If a thousand people click on a specific oversized hoodie, these cookies tell us we need to restock it ASAP. It’s all anonymous data that helps us build a better XShop.
+## How We Use Cookies
 
-### Control Your Cookies
-Not a fan? You can clear your app cache or disable tracking in your phone's native privacy settings. Just a heads up: turning off *Essential* cookies might make your shopping cart forget your items!
+### Essential Cookies
+
+These cookies are required for core functionality, including:
+
+- Keeping you signed in.
+- Maintaining your shopping cart.
+- Supporting secure checkout.
+
+### Personalization Cookies
+
+These cookies remember your preferences, including:
+
+- Saved products.
+- Preferred sizes.
+- Favorite brands.
+- Shopping preferences.
+
+### Analytics Cookies
+
+Analytics cookies help us understand how users interact with XShop so we can improve the application and enhance the overall user experience.
+
+## Managing Cookies
+
+You can manage or disable cookies through your device or browser settings. Please note that disabling essential cookies may affect certain features of the application.
+
+## Contact Us
+
+support@xshop.com

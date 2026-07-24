@@ -116,4 +116,24 @@ class AppStrings {
   static const tagTerms = "terms";
   static const tagPolicy = "policy";
   static const tagCookie = "cookie";
+
+  // ==========================================
+  // ACCOUNT
+  // ==========================================
+  static const account = 'Account';
+
+  static const myOrders = 'My Orders';
+  static const myDetails = 'My Details';
+  static const addressBook = 'Address Book';
+  static const paymentMethods = 'Payment Methods';
+  static const notifications = 'Notifications';
+  static const languages = 'Languages';
+  static const faqs = 'FAQs';
+  static const helpCenter = 'Help Center';
+  static const logout = 'Logout';
+  static const logoutTitle = "Log out?";
+  static const logoutSubtitle =
+      "Are you sure you want to log out of your account?";
+  static const logoutConfirmBtn = "Yes, Logout";
+  static const logoutCancelBtn = "No, Cancel";
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import 'package:xshop/core/theme/tokens/app_borders.dart';
-import 'package:xshop/core/theme/tokens/theme_extensions.dart';
+import '../../theme/tokens/app_borders.dart';
+import '../../theme/tokens/theme_extensions.dart';
 
 class Distention {
   final String label;

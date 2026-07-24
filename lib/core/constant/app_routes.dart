@@ -31,6 +31,9 @@ class AppRoutes {
   static const cart = Route(path: '/cart', name: 'cart');
   static const account = Route(path: '/account', name: 'account');
 
+  // account routes
+  static const helpCenter = Route(path: 'help-center', name: 'helpCenter');
+
   // test route
   static const workspace = Route(path: '/workspace', name: 'workspace');
 }

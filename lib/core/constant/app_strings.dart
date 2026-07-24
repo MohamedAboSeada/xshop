@@ -136,4 +136,15 @@ class AppStrings {
       "Are you sure you want to log out of your account?";
   static const logoutConfirmBtn = "Yes, Logout";
   static const logoutCancelBtn = "No, Cancel";
+
+  // ==========================================
+  // Help Center
+  // ==========================================
+  static const customerService = 'Customer Service';
+  static const whatsapp = 'Whatsapp';
+  static const website = 'Website';
+  static const facebook = 'Facebook';
+  static const twitter = 'Twitter';
+  static const instagram = 'Instagram';
+  static const unknownHelpCenterItem = 'Unknown help center item';
 }

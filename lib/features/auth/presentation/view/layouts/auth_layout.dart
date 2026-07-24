@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../widgets/page_title.dart';
+
 import '../../../../../core/theme/tokens/theme_extensions.dart';
+import '../widgets/page_title.dart';
 
 class AuthLayout extends StatelessWidget {
   final Widget form;

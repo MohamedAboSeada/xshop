@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:xshop/core/constant/app_strings.dart';
+import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/widgets/forms/app_form.dart';
 import '../../../../../core/widgets/forms/otp_field.dart';

@@ -1,24 +1,39 @@
-# 📜 Terms of Service
-**Welcome to XShop**
+# Terms of Service
 
-> **TL;DR (The Short Version):** 
-> Treat our platform with respect, double-check your sizes before ordering, and if something doesn’t fit right, you have 30 days to send it back. Simple as that.
+_Last updated: July 24, 2026_
 
-### 1. The XShop Experience
-By joining the XShop community, you agree to play by the rules. Your account is your personal VIP pass to our latest drops, exclusive sales, and tailored recommendations. Keep your login details secure; you're the only one who should be calling the shots on your style.
+## Acceptance of Terms
 
-### 2. Drops, Restocks, & Pricing
-Fashion moves fast, and so do we. 
-* **Pricing:** Prices are subject to change, especially during seasonal sales.
-* **Availability:** Adding an item to your cart doesn't reserve it. It's yours only when the checkout is complete.
-* **Accuracy:** We hustle to ensure colors and textures look exactly like they do in real life, but your screen's brightness might change the vibe slightly.
+By using XShop, you agree to these Terms of Service. If you do not agree, please discontinue use of the application.
 
-### 3. The Return Ritual
-Got the wrong size? Not your color? No stress.
-You can return any unworn, unwashed item with the tags still attached within **30 days** of delivery. 
-*(Note: Intimates, accessories, and customized pieces are final sale for hygiene reasons).*
+## User Accounts
 
-### 4. Intellectual Property
-Every graphic tee, logo, and app design you see here belongs to XShop. Don’t copy our homework.
+You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
 
-**Need a human?** Hit us up at `support@xshop.com` and our styling support team will sort you out.
+## Products and Pricing
+
+- Product availability may change without notice.
+- Prices may be updated at any time.
+- Products are reserved only after successful payment.
+
+## Orders and Returns
+
+Eligible items may be returned within 30 days of delivery provided they are unused, unworn, and include their original tags.
+
+Certain products, including personalized items and hygiene-sensitive products, may not be eligible for return.
+
+## Intellectual Property
+
+All content within XShop, including logos, designs, graphics, text, and software, is the property of XShop and may not be copied, reproduced, or distributed without permission.
+
+## Limitation of Liability
+
+XShop is not responsible for indirect or consequential damages arising from the use of the application or its services.
+
+## Changes to These Terms
+
+We may update these Terms of Service periodically. Continued use of the application constitutes acceptance of any updates.
+
+## Contact Us
+
+support@xshop.com

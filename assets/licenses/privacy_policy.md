@@ -1,24 +1,50 @@
-# 🔐 The Privacy Promise
-**Your Style is Public. Your Data is Private.**
+# Privacy Policy
 
+_Last updated: July 24, 2026_
 
-> We know you care about how your personal information is used. At XShop, we only collect what we absolutely need to get that perfect outfit to your doorstep. 
+## Introduction
 
-### 📦 What We Collect (And Why)
-To give you the ultimate shopping experience, we need a few details:
-1. **The Essentials:** Name, email, and shipping address (so your clothes actually reach you).
-2. **The Style Profile:** Your browsing history, saved items, and sizing preferences (to recommend pieces you'll actually wear).
-3. **The Wallet:** Payment details. *(Don't worry, we use bank-level encryption and never store your full credit card number).*
+At XShop, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains what information we collect, how we use it, and the choices available to you.
 
-### 🤝 Who Gets to See Your Data?
-**Nobody, unless they're helping deliver your order.** 
-We share your address with our shipping partners (like FedEx or DHL) and payment info with secure gateways (like Stripe or PayPal). We **never** sell your data to shady third parties.
+## Information We Collect
 
-### 🛡️ Your Rights, Your Control
-You’re in the driver's seat. At any time, you can:
-* Request a copy of the data we have on you.
-* Ask us to delete your account and wipe your history completely.
-* Unsubscribe from our style newsletters with one tap.
+To provide our services, we may collect:
 
+- Personal information such as your name, email address, and shipping address.
+- Account information including your saved items, browsing activity, and shopping preferences.
+- Payment information processed securely through trusted payment providers. XShop does not store your complete payment card details.
 
-*Stay stylish, stay secure.*
+## How We Use Your Information
+
+Your information is used to:
+
+- Process and deliver your orders.
+- Personalize your shopping experience.
+- Improve our products and services.
+- Provide customer support.
+- Send order updates and optional promotional communications.
+
+## Sharing Your Information
+
+We only share your information when necessary to provide our services, including:
+
+- Shipping providers for order delivery.
+- Payment processors for secure transactions.
+- Service providers that help operate the platform.
+
+We never sell your personal information to third parties.
+
+## Your Rights
+
+You have the right to:
+
+- Access your personal information.
+- Request corrections to inaccurate information.
+- Delete your account and associated personal data.
+- Opt out of marketing communications at any time.
+
+## Contact Us
+
+If you have any questions about this Privacy Policy, please contact us at:
+
+support@xshop.com

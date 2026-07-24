@@ -28,74 +28,50 @@ class LicenseLayout extends StatelessWidget {
           if (asyncSnapshot.hasData) {
             return SafeArea(
               child: Markdown(
-                padding: EdgeInsets.symmetric(
-                  horizontal: context.spaces.s24,
-                  vertical: context.spaces.s24.h,
+                padding: EdgeInsets.fromLTRB(
+                  context.spaces.s24,
+                  context.spaces.s16.h,
+                  context.spaces.s24,
+                  context.spaces.s32.h,
                 ),
                 selectable: true,
                 data: asyncSnapshot.data!,
                 styleSheet: MarkdownStyleSheet(
                   h1: context.typography.h2.copyWith(
                     color: context.colors.primary900,
+                    height: 1,
                   ),
-                  h1Padding: EdgeInsets.only(bottom: context.spaces.s16.h),
+                  h1Padding: EdgeInsets.only(bottom: context.spaces.s4.h),
 
-                  h2: context.typography.h3.copyWith(
+                  h2: context.typography.h4.copyWith(
                     color: context.colors.primary900,
+                    fontWeight: FontWeight.w700,
+                    height: 1.2,
                   ),
                   h2Padding: EdgeInsets.only(
-                    top: context.spaces.s24.h,
-                    bottom: context.spaces.s12.h,
-                  ),
-
-                  h3: context.typography.h4.copyWith(
-                    color: context.colors.primary900,
-                  ),
-                  h3Padding: EdgeInsets.only(
-                    top: context.spaces.s16.h,
+                    top: context.spaces.s8.h,
                     bottom: context.spaces.s8.h,
                   ),
 
                   p: context.typography.b1Regular.copyWith(
-                    color: context.colors.primary700,
-                    height: 1.5,
+                    color: context.colors.primary600,
+                    height: 1.7,
                   ),
-                  pPadding: EdgeInsets.only(bottom: context.spaces.s12.h),
+                  pPadding: EdgeInsets.only(bottom: context.spaces.s4.h),
+
+                  listBullet: context.typography.b1Regular.copyWith(
+                    color: context.colors.primary600,
+                    height: 1,
+                  ),
 
                   strong: context.typography.b1Semibold.copyWith(
                     color: context.colors.primary900,
                   ),
 
-                  blockquoteDecoration: BoxDecoration(
-                    color: context.colors.primary100.withValues(alpha: 0.5),
-                    borderRadius: BorderRadius.all(context.radius.r8),
-                    border: Border(
-                      left: BorderSide(
-                        color: context.colors.primary900,
-                        width: 4.0,
-                      ),
-                    ),
-                  ),
-                  blockquotePadding: EdgeInsets.symmetric(
-                    horizontal: context.spaces.s16,
-                    vertical: context.spaces.s16.h,
-                  ),
-                  blockquote: context.typography.b1Medium.copyWith(
-                    color: context.colors.primary800,
+                  em: context.typography.b1Regular.copyWith(
                     fontStyle: FontStyle.italic,
-                    height: 1.5,
+                    color: context.colors.primary500,
                   ),
-
-                  horizontalRuleDecoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(color: context.colors.primary200),
-                    ),
-                  ),
-
-                  listBullet: context.typography.b1Regular.copyWith(
-                    color: context.colors.primary900,
-                  ),
-                  listIndent: 24.0,
                 ),
               ),
             );

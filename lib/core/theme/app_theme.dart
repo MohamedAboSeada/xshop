@@ -81,6 +81,8 @@ class AppTheme {
         isDense: true,
       ),
 
+      cardTheme: const CardThemeData(margin: .zero, elevation: 0.0),
+
       dividerTheme: DividerThemeData(color: _colors.primary100, thickness: 1),
       extensions: [
         _typography,

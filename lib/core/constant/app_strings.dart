@@ -60,6 +60,8 @@ class AppStrings {
   static const fieldFullName = "fullname";
   static const fieldConfirmPassword = "confirm";
   static const fieldOtp = "otp";
+  static const fieldReview = "review";
+  static const fieldRate = "rate";
 
   // ==========================================
   // 4. FORM FIELDS & LABELS
@@ -147,4 +149,27 @@ class AppStrings {
   static const twitter = 'Twitter';
   static const instagram = 'Instagram';
   static const unknownHelpCenterItem = 'Unknown help center item';
+
+  // ==========================================
+  // Orders Screen
+  // ==========================================
+  static const sheetWriteYourReview = "Write your review...";
+  static const submit = "Submit";
+  static const review = "Review";
+  static const sheetTitle = "How was your order?";
+  static const sheetSubtitle = "Please give your rating and also your review.";
+  static const tabOngoing = "Ongoing";
+  static const tabDispatched = "Dispatched";
+  static const tabCompleted = "Completed";
+  static const leaveReview = "Leave review...";
+  static String totalAmount(double total) => "Total: \$$total";
+  static const trackOrder = 'Track Order';
+  static const cancelOrder = 'Cancel Order';
+  static const cancelOrderTitle = 'Cancel Order';
+  static const cancelOrderSubtitle =
+      'Are you sure you want\n to cancel this order?';
+  static const yesCancel = 'Yes, Cancel';
+  static const no = 'No';
+  static String orderDetailsText(String size, int quantity) =>
+    'Size $size, Q: x$quantity';
 }

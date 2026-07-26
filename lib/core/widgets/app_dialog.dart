@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:xshop/core/constant/app_strings.dart';
-import '../../../../../../core/constant/app_assets.dart';
-import '../../../../../../core/constant/app_routes.dart';
+
 import '../../../../../../core/theme/tokens/theme_extensions.dart';
 import '../../../../../../core/widgets/action_button.dart';
 
-class LogoutDialog extends StatelessWidget {
-  const LogoutDialog({super.key});
+class AppDialog extends StatelessWidget {
+  final String iconAsset;
+  final String title;
+  final String subtitle;
+  final String primaryButtonLabel;
+  final VoidCallback onPrimaryPressed;
+  final ButtonType primaryButtonType;
+
+  final String? secondaryButtonLabel;
+  final VoidCallback? onSecondaryPressed;
+  final ButtonType secondaryButtonType;
+
+  const AppDialog({
+    super.key,
+    required this.iconAsset,
+    required this.title,
+    required this.subtitle,
+    required this.primaryButtonLabel,
+    required this.onPrimaryPressed,
+    this.primaryButtonType = .filled,
+    this.secondaryButtonLabel,
+    this.onSecondaryPressed,
+    this.secondaryButtonType = .filled,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +44,13 @@ class LogoutDialog extends StatelessWidget {
             Column(
               spacing: context.spaces.s12.h,
               children: [
-                SvgPicture.asset(AppAssets.warning),
+                SvgPicture.asset(iconAsset),
                 Column(
                   spacing: context.spaces.s8.h,
                   children: [
-                    Text(AppStrings.logoutTitle, style: context.typography.h4),
+                    Text(title, style: context.typography.h4),
                     Text(
-                      AppStrings.logoutSubtitle,
+                      subtitle,
                       textAlign: .center,
                       style: context.typography.b1Regular.copyWith(
                         color: context.colors.primary500,
@@ -41,25 +60,25 @@ class LogoutDialog extends StatelessWidget {
                 ),
               ],
             ),
+
             Column(
               spacing: context.spaces.s12.h,
               mainAxisAlignment: .end,
               crossAxisAlignment: .stretch,
               children: [
                 ActionButton(
-                  label: AppStrings.logoutConfirmBtn,
-                  type: .danger,
-                  onPressed: () {
-                    context.goNamed(AppRoutes.signIn.name);
-                  },
+                  label: primaryButtonLabel,
+                  type: primaryButtonType,
+                  onPressed: onPrimaryPressed,
                 ),
-                ActionButton(
-                  label: AppStrings.logoutCancelBtn,
-                  type: .outlined,
-                  onPressed: () {
-                    context.pop();
-                  },
-                ),
+
+                if (secondaryButtonLabel != null)
+                  ActionButton(
+                    label: secondaryButtonLabel!,
+                    type: secondaryButtonType,
+                    onPressed:
+                        onSecondaryPressed ?? () => Navigator.of(context).pop(),
+                  ),
               ],
             ),
           ],

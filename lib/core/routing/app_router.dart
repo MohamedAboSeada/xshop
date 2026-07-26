@@ -1,23 +1,25 @@
 import 'package:go_router/go_router.dart';
-import 'package:xshop/features/app/account/features/help_center/presentation/screen/help_center_screen.dart';
+
+import '../../features/app/account/features/help_center/presentation/screen/help_center_screen.dart';
+import '../../features/app/account/features/orders/presentation/screen/orders_screen.dart';
 import '../../features/app/account/presentation/view/screen/account_screen.dart';
-import '../widgets/layouts/app_shell.dart';
 import '../../features/app/cart/presentation/screen/cart_screen.dart';
 import '../../features/app/home/presentation/screen/home_screen.dart';
 import '../../features/app/saved/presentation/screen/saved_screen.dart';
 import '../../features/app/search/presentation/screen/search_screen.dart';
-import '../workspace/workspace.dart';
 import '../../features/auth/presentation/view/screens/forget_password_screen.dart';
 import '../../features/auth/presentation/view/screens/reset_password_screen.dart';
+import '../../features/auth/presentation/view/screens/sign_in_screen.dart';
+import '../../features/auth/presentation/view/screens/sign_up_screen.dart';
 import '../../features/auth/presentation/view/screens/verification_code_screen.dart';
 import '../../features/license/presentation/view/screens/cookie_use_screen.dart';
 import '../../features/license/presentation/view/screens/policy_screen.dart';
 import '../../features/license/presentation/view/screens/terms_screen.dart';
-import '../constant/app_routes.dart';
-import '../../features/auth/presentation/view/screens/sign_in_screen.dart';
-import '../../features/auth/presentation/view/screens/sign_up_screen.dart';
 import '../../features/onboarding/presentation/view/screens/onboarding_screen.dart';
 import '../../features/onboarding/presentation/view/screens/splash_screen.dart';
+import '../constant/app_routes.dart';
+import '../widgets/layouts/app_shell.dart';
+import '../workspace/workspace.dart';
 
 class AppRouter {
   AppRouter._();
@@ -136,6 +138,11 @@ class AppRouter {
                     path: AppRoutes.helpCenter.path,
                     name: AppRoutes.helpCenter.name,
                     builder: (context, state) => const HelpCenterScreen(),
+                  ),
+                  GoRoute(
+                    path: AppRoutes.orders.path,
+                    name: AppRoutes.orders.name,
+                    builder: (context, state) => const OrdersScreen(),
                   ),
                 ],
               ),

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import 'package:xshop/core/constant/app_routes.dart';
-import 'package:xshop/core/constant/app_strings.dart';
-import 'package:xshop/core/widgets/custom_app_bar.dart';
+import 'package:xshop/core/constant/app_assets.dart';
+import 'package:xshop/core/widgets/app_dialog.dart';
 
+import '../../../../../../core/constant/app_routes.dart';
+import '../../../../../../core/constant/app_strings.dart';
+import '../../../../../../core/widgets/custom_app_bar.dart';
 import '../data/models/account_tile_config.dart';
 import '../widgets/account_section.dart';
-import '../widgets/logout_dialog.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -72,6 +73,8 @@ class AccountScreen extends StatelessWidget {
   void _onTilePressed(BuildContext context, AccountTileConfig config) {
     switch (config.id) {
       case AccountTileId.myOrders:
+        context.goNamed(AppRoutes.orders.name);
+        break;
       case AccountTileId.myDetails:
       case AccountTileId.addressBook:
       case AccountTileId.paymentMethods:
@@ -93,7 +96,21 @@ class AccountScreen extends StatelessWidget {
     showDialog(
       barrierDismissible: false,
       context: context,
-      builder: (context) => const LogoutDialog(),
+      builder: (context) => AppDialog(
+        iconAsset: AppAssets.warning,
+        title: AppStrings.logoutTitle,
+        subtitle: AppStrings.logoutSubtitle,
+        primaryButtonLabel: AppStrings.logoutConfirmBtn,
+        primaryButtonType: .danger,
+        onPrimaryPressed: () {
+          context.goNamed(AppRoutes.signIn.name);
+        },
+        secondaryButtonLabel: AppStrings.logoutCancelBtn,
+        secondaryButtonType: .outlined,
+        onSecondaryPressed: () {
+          context.pop();
+        },
+      ),
     );
   }
 

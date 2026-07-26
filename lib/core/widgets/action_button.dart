@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../constant/app_durations.dart';
 import '../theme/tokens/theme_extensions.dart';
 

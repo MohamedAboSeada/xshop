@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:xshop/core/widgets/custom_app_bar.dart';
+import '../../../../../core/widgets/custom_app_bar.dart';
 
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 

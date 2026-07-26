@@ -17,6 +17,8 @@ class AppColors extends ThemeExtension<AppColors> {
 
   final Color success;
   final Color danger;
+  final Color warning;
+  final Color info;
   final Color facebookBrand;
 
   const AppColors({
@@ -33,6 +35,8 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.success,
     required this.danger,
     required this.facebookBrand,
+    required this.warning,
+    required this.info,
   });
 
   factory AppColors.fallback() => const AppColors(
@@ -48,6 +52,8 @@ class AppColors extends ThemeExtension<AppColors> {
     primary900: Color(0xFF1A1A1A),
     success: Color(0xFF0C9409),
     danger: Color(0xFFED1010),
+    warning: Color(0xFFF59E0B),
+    info: Color(0xFF0284C7),
     facebookBrand: Color(0xFF1877f2),
   );
 
@@ -66,6 +72,8 @@ class AppColors extends ThemeExtension<AppColors> {
     Color? success,
     Color? danger,
     Color? facebookBrand,
+    Color? warning,
+    Color? info,
   }) {
     return AppColors(
       primary0: primary0 ?? this.primary0,
@@ -81,6 +89,8 @@ class AppColors extends ThemeExtension<AppColors> {
       success: success ?? this.success,
       danger: danger ?? this.danger,
       facebookBrand: facebookBrand ?? this.facebookBrand,
+      warning: warning ?? this.warning,
+      info: info ?? this.info,
     );
   }
 
@@ -101,6 +111,8 @@ class AppColors extends ThemeExtension<AppColors> {
       success: Color.lerp(success, other.success, t)!,
       danger: Color.lerp(danger, other.danger, t)!,
       facebookBrand: Color.lerp(facebookBrand, other.facebookBrand, t)!,
+      warning: Color.lerp(warning, other.warning, t)!,
+      info: Color.lerp(info, other.info, t)!,
     );
   }
 }

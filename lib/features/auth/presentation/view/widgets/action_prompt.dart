@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
+
 import '../../../../../core/theme/tokens/theme_extensions.dart';
 
 /// Used to switch between auth screens

@@ -3,10 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/constant/app_assets.dart';
 import '../../../../../core/constant/app_durations.dart';
 import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/theme/tokens/theme_extensions.dart';
-import '../../../../../core/constant/app_assets.dart';
 import '../../../../../core/utils/image_cache.dart';
 
 class SplashScreen extends StatefulWidget {

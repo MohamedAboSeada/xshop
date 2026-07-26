@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:xshop/core/theme/tokens/app_borders.dart';
-import 'package:xshop/core/theme/tokens/theme_extensions.dart';
-import 'package:xshop/features/app/account/features/help_center/data/models/help_center_item.dart';
+
+import '../../../../../../../core/theme/tokens/app_borders.dart';
+import '../../../../../../../core/theme/tokens/theme_extensions.dart';
+import '../../data/models/help_center_item.dart';
 
 class HelpCenterTile extends StatelessWidget {
   final HelpCenterItem item;

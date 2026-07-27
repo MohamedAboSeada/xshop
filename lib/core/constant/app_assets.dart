@@ -53,6 +53,10 @@ class AppAssets {
     location: .icons,
   );
   static final warning = _getAsset(assetName: "Warning.svg", location: .icons);
+  static final emptyBox = _getAsset(
+    assetName: "Box-duotone.svg",
+    location: .icons,
+  );
 
   /// License files
   static final terms = _getAsset(assetName: "terms.md", location: .license);

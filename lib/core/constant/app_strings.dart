@@ -171,5 +171,11 @@ class AppStrings {
   static const yesCancel = 'Yes, Cancel';
   static const no = 'No';
   static String orderDetailsText(String size, int quantity) =>
-    'Size $size, Q: x$quantity';
+      'Size $size, Q: x$quantity';
+  static String noOrdersTitle(String status) {
+    return "No $status orders!";
+  }
+  static String noOrdersDescription(String status) {
+    return "You don’t have any $status\norders at this time.";
+  }
 }

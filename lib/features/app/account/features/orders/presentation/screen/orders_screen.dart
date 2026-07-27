@@ -22,13 +22,19 @@ class OrdersScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   // Ongoing Orders
-                  OrdersList(orders: MockOrderData.ongoingOrders),
+                  OrdersList(
+                    orders: MockOrderData.ongoingOrders,
+                    type: .ongoing,
+                  ),
 
                   // Dispatched Orders
-                  OrdersList(orders: MockOrderData.dispatchedOrders),
+                  const OrdersList(orders: [], type: .dispatched),
 
                   // Completed Orders
-                  OrdersList(orders: MockOrderData.completedOrders),
+                  OrdersList(
+                    orders: MockOrderData.completedOrders,
+                    type: .completed,
+                  ),
                 ],
               ),
             ),

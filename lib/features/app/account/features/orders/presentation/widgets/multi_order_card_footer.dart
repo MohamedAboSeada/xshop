@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import '../../../../../../../core/constant/app_routes.dart';
 
 import '../../../../../../../core/constant/app_assets.dart';
 import '../../../../../../../core/constant/app_strings.dart';
@@ -31,12 +33,6 @@ class MultiOrderCardFooter extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ActionButton(
-                  label: AppStrings.trackOrder,
-                  onPressed: () {},
-                  icon: LucideIcons.map,
-                  alignment: .start,
-                ),
-                ActionButton(
                   label: AppStrings.cancelOrder,
                   type: ButtonType.danger,
                   onPressed: () {
@@ -60,7 +56,12 @@ class MultiOrderCardFooter extends StatelessWidget {
           } else if (isDispatched) {
             return ActionButton(
               label: AppStrings.trackOrder,
-              onPressed: () {},
+              onPressed: () {
+                context.goNamed(
+                  AppRoutes.trackOrder.name,
+                  pathParameters: {'id': order.orderId},
+                );
+              },
               icon: LucideIcons.map,
               alignment: .start,
             );

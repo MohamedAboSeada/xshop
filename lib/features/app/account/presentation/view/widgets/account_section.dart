@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../../../../../core/theme/tokens/theme_extensions.dart';
 import '../data/models/account_tile_config.dart';
 import 'account_tile.dart';

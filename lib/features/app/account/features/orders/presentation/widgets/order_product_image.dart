@@ -19,15 +19,19 @@ class OrderProductImage extends StatelessWidget {
             aspectRatio: 1,
             child: ClipRRect(
               borderRadius: BorderRadius.all(context.radius.r10.r),
-              child: CachedNetworkImage(
-                fit: .cover,
-                imageUrl: imageUrl,
-                placeholder: (context, url) {
-                  return const Skeletonizer.zone(child: Bone.square());
-                },
-                errorWidget: (_, _, _) => ColoredBox(
-                  color: context.colors.primary100,
-                  child: const Icon(Icons.broken_image_outlined),
+              child: Skeleton.replace(
+                child: CachedNetworkImage(
+                  fit: .cover,
+                  imageUrl: imageUrl,
+                  placeholder: (context, url) {
+                    return const Skeletonizer.zone(
+                      child: SizedBox.expand(child: Bone.square()),
+                    );
+                  },
+                  errorWidget: (_, _, _) => ColoredBox(
+                    color: context.colors.primary100,
+                    child: const Icon(Icons.broken_image_outlined),
+                  ),
                 ),
               ),
             ),

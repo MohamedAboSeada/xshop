@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/core/widgets/app_dialog.dart';
+import '../../../../../../core/constant/app_assets.dart';
+import '../../../../../../core/widgets/app_dialog.dart';
 
 import '../../../../../../core/constant/app_routes.dart';
 import '../../../../../../core/constant/app_strings.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:go_router/go_router.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/core/constant/app_routes.dart';
-import 'package:xshop/core/widgets/app_dialog.dart';
+import '../../../../../core/constant/app_assets.dart';
+import '../../../../../core/constant/app_routes.dart';
+import '../../../../../core/widgets/app_dialog.dart';
 import '../../../../../core/constant/app_strings.dart';
 import '../../../../../core/widgets/forms/app_form.dart';
 import '../../../../../core/widgets/forms/password_field.dart';

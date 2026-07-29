@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:xshop/core/constant/app_assets.dart';
-import 'package:xshop/core/constant/app_strings.dart';
+import '../../../../../../../core/constant/app_assets.dart';
+import '../../../../../../../core/constant/app_strings.dart';
 import '../../domain/entities/order_model.dart';
 import '../../../../../../../core/theme/tokens/theme_extensions.dart';
 import 'multi_product_order_card.dart';

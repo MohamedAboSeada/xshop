@@ -175,7 +175,31 @@ class AppStrings {
   static String noOrdersTitle(String status) {
     return "No $status orders!";
   }
+
   static String noOrdersDescription(String status) {
     return "You don’t have any $status\norders at this time.";
   }
+
+  // ==========================================
+  // Track Orders Screen
+  // ==========================================
+  static String orderNumber(String orderId) {
+    return "Order $orderId";
+  }
+
+  static String estimatedArrivalTime(String time) {
+    return "Estimated Arrival: $time";
+  }
+
+  static const String orderDelayed = "Order delayed?";
+  static const String orderDelayedSubtitle =
+      "'Report if you haven\'t received your order yet.'";
+  static const String report = "Report";
+  static const String shippingInfo = "Shipping Information";
+  static const String copyTrackingNumber = "Copy Tracking Number";
+  static const String orderStatus = "Order Status";
+  static String shippingCompany(String company) =>
+      "Shipping via: <bold>$company</bold>'";
+  static String orderTrackingNumber(String trackingNumber) =>
+      "Tracking number: <bold>$trackingNumber</bold>'";
 }

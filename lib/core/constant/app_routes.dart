@@ -34,6 +34,7 @@ class AppRoutes {
   // account routes
   static const helpCenter = Route(path: 'help-center', name: 'helpCenter');
   static const orders = Route(path: 'my-orders', name: "myOrders");
+  static const trackOrder = Route(path: 'track-order/:id', name: 'trackOrder');
   
   // test route
   static const workspace = Route(path: '/workspace', name: 'workspace');

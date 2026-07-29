@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/app/account/features/help_center/presentation/screen/help_center_screen.dart';
+import '../../features/app/account/features/orders/features/track_order/presentation/view/screen/track_order_screen.dart';
 import '../../features/app/account/features/orders/presentation/screen/orders_screen.dart';
 import '../../features/app/account/presentation/view/screen/account_screen.dart';
 import '../../features/app/cart/presentation/screen/cart_screen.dart';
@@ -24,7 +25,7 @@ import '../workspace/workspace.dart';
 class AppRouter {
   AppRouter._();
 
-  static final _initialLocation = AppRoutes.account.path;
+  static final _initialLocation = AppRoutes.splash.path;
 
   static final routerConfig = GoRouter(
     initialLocation: _initialLocation,
@@ -143,6 +144,15 @@ class AppRouter {
                     path: AppRoutes.orders.path,
                     name: AppRoutes.orders.name,
                     builder: (context, state) => const OrdersScreen(),
+                    routes: [
+                      GoRoute(
+                        path: AppRoutes.trackOrder.path,
+                        name: AppRoutes.trackOrder.name,
+                        builder: (context, state) => TrackOrderScreen(
+                          orderId: state.pathParameters["id"] as String,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

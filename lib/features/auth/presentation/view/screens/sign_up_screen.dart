@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../../../core/constant/app_routes.dart';
 import '../../../../../core/constant/app_strings.dart';
-import '../widgets/s_s_o_buttons.dart';
 import '../layouts/auth_layout.dart';
 import '../widgets/action_prompt.dart';
+import '../widgets/s_s_o_buttons.dart';
 import '../widgets/sign_up_form.dart';
 
 class SignUpScreen extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/order_cards_loading_skeleton.dart';
 import '../../domain/entities/mock_order_data.dart';
 import '../widgets/orders_list.dart';
 import '../widgets/orders_tab_bar.dart';
@@ -22,19 +23,16 @@ class OrdersScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   // Ongoing Orders
-                  OrdersList(
-                    orders: MockOrderData.ongoingOrders,
-                    type: .ongoing,
-                  ),
+                  const OrderCardsLoadingSkeleton(status: .ongoing),
 
                   // Dispatched Orders
-                  const OrdersList(orders: [], type: .dispatched),
+                  OrdersList(
+                    orders: MockOrderData.dispatchedOrders,
+                    type: .dispatched,
+                  ),
 
                   // Completed Orders
-                  OrdersList(
-                    orders: MockOrderData.completedOrders,
-                    type: .completed,
-                  ),
+                  const OrdersList(orders: [], type: .completed),
                 ],
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 import '../../../../../../../core/constant/app_strings.dart';
 import '../../domain/entities/order_model.dart';
 import '../../../../../../../core/theme/tokens/theme_extensions.dart';
@@ -32,7 +33,7 @@ class MultiOrderCardHeader extends StatelessWidget {
               ),
             ],
           ),
-          OrderStatusBadge(status: order.status),
+          Skeleton.leaf(child: OrderStatusBadge(status: order.status)),
         ],
       ),
     );
